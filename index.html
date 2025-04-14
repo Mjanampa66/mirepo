@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Tarjeta Interactiva</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .tarjeta {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      transition: 0.4s;
+    }
+
+    .avatar {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .info-extra {
+      display: none;
+      margin-top: 15px;
+      color: #444;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tarjeta">
+    <img src="https://i.pravatar.cc/100" alt="Foto de perfil" class="avatar">
+    <h2>Ana Torres</h2>
+    <p>"La creatividad es mi motor"</p>
+
+    <button onclick="mostrarInfo()">Mostrar más info</button>
+
+    <div class="info-extra" id="info">
+      <p>📧 ana.torres@email.com</p>
+      <p>🎮 Gamer y amante del diseño</p>
+      <p>📸 Instagram: @ana.design</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarInfo() {
+      let info = document.getElementById("info");
+
+      // Alternar visibilidad
+      if (info.style.display === "none" || info.style.display === "") {
+        info.style.display = "block";
+      } else {
+        info.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
